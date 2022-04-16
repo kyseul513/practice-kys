@@ -11,7 +11,8 @@ class Person {
 	}
 
 	Person(String name, int age, int height, int weight) {
-		this.name = name;		this.age = age;
+		this.name = name;
+		this.age = age;
 		this.height = height;
 		this.weight = weight;
 	}
