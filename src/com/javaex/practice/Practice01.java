@@ -96,8 +96,29 @@ class Villain extends Person {
 	}
 
 	public void printPerson() {
-		System.out.println("이름:" + getName());
-		System.out.println("나이:" + getAge());
+		System.out.println("이름: " + getName());
+		System.out.println("나이: " + getAge());
+		System.out.println("무기: " + getWeaponName(getWeapon()));
+	}
+
+	public String getWeaponName(int a) {
+		String weapon;
+
+		switch (a) {
+		case 1:
+			weapon = "창";
+			break;
+		case 2:
+			weapon = "방패";
+			break;
+		case 3:
+			weapon = "총";
+			break;
+		default:
+			weapon = "---";
+			break;
+		}
+		return weapon;
 	}
 }
 
@@ -110,5 +131,8 @@ public class Practice01 {
 
 		Villain v1 = new Villain("aa", 20, 180, 80, "15001231", 1, 99.5);
 		v1.printPerson();
+		System.out.print(v1.getName() + " ");
+		v1.move();
+
 	}
 }
